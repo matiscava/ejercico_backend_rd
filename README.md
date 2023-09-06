@@ -2,8 +2,15 @@
 
 Desarrollar un microservicio rest-api en python fast-api con conexión a una base de datos sqlite.
 
+## Para correr el microservicion ingrese por consola la siguiente linea:
+
+````
+uvicorn main:app --reload
+````
+
+
 El mismo cuenta con 2 endpoints
- 
+
 ### POST /input/{my_target_field}
 
 Obtiene un json del body con la siguiente configuracion:
@@ -39,3 +46,8 @@ Y devuelve la información ingresado. Por ejemplo:
 ```
 
 En caso de que se ingrese un id que no está asignado, se devuelve un mensaje de error informando que no existe ese author. 
+
+
+## Peticiones de prueba
+### /docs
+Para testear las peticiones ingrese a localhost:8000/docs donde se abrira una vista de Swagger con los endpoints definidos.
